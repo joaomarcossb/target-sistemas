@@ -1,15 +1,13 @@
-const fibonacci = (num) => {
-    let curr = 0, next = 1, sum = 0;
-    while (sum < num) {
-        sum = curr + next;
-        curr = next;
-        next = sum;
-    }
-    return console.log(
-        num === sum 
-        ? `O número ${num} pertence à sequência.` 
-        : `O número ${num} não pertence à sequência.`
-    );
-}
+const fibonacci = (numero) => {
+    let atual = 0, proximo = 1, soma = 0;
+    while (soma < numero) {
+        soma = atual + proximo;
+        atual = proximo;
+        proximo = soma;
+    };
+    return numero == soma 
+    ? `O número ${numero} pertence à sequência.` 
+    : `O número ${numero} não pertence à sequência.`;
+};
 
-fibonacci(21); // 0, 1, 1, 2, 3, 5, 8, 13, 21...
+console.log(fibonacci(21));
